@@ -5,12 +5,6 @@ LONDON_LATITUDE_KM = (-0.1278 * 111)
 
 describe Controller do
 
-  describe '#return_people' do
-    it "returns a list of people living within a radius" do
-      # expect(subject.return_people(50)).to be Array
-    end
-  end
-
   describe '#request_all_users' do
     it "sends a GET request to retrieve all users and returns a response" do
       expect(subject.request_all_users.code).to eq 200
@@ -36,7 +30,7 @@ describe Controller do
         radius = Math.sqrt((x_distance ** 2 + y_distance ** 2))
         expect(radius <= 50).to be true
       end
-      
+
     end
   end
   
